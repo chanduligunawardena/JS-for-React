@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Student Directory</h1>
+        <p class="subtitle">Manage and search enrolled students</p>
+      </header>
+
+      <section class="card add-section">
+        <h2 class="section-title">Add Student</h2>
+        <form id="student-form">
+          <div class="form-row">
+            <input type="text" id="name-input" placeholder="Full name" required />
+            <input type="text" id="course-input" placeholder="Course" required />
+          </div>
+          <div class="form-row">
+            <select id="level-select" required>
+              <option value="" disabled selected>Select level</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+            <button type="submit">+ Add Student</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Students</h2>
+        <div class="search-row">
+          <input
+            type="text"
+            id="search" 
+            placeholder="Search by name or course..."
+          />
+          <button id="search-btn" type="button">Search</button>
+        </div>
+        <p id="student-count" class="student-count"></p>
+        <div id="student-list"></div>
+      </section>
+    </div>
+
+    <script src="./app.js" ></script>
+  </body>
+</html>
